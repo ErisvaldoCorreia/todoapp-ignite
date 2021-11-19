@@ -25,28 +25,28 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/0</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/2</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
@@ -123,7 +123,13 @@
 <a name='L64'></a><a href='#L64'>64</a>
 <a name='L65'></a><a href='#L65'>65</a>
 <a name='L66'></a><a href='#L66'>66</a>
-<a name='L67'></a><a href='#L67'>67</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -132,19 +138,24 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">22x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -189,80 +200,87 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { useState } from 'react';
-import { StyleSheet, TextInput, TouchableOpacity, View } from 'react-native';
-import Icon from 'react-native-vector-icons/Feather';
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { useState } from "react";
+import { StyleSheet, TextInput, TouchableOpacity, View } from "react-native";
+import Icon from "react-native-vector-icons/Feather";
 &nbsp;
 interface TodoInputProps {
   addTask: (task: string) =&gt; void;
 }
 &nbsp;
 export function TodoInput({ addTask }: TodoInputProps) {
-  // const [task, setTask] = useState('');
+  const [task, setTask] = useState("");
 &nbsp;
-  function <span class="fstat-no" title="function not covered" >handleAddNewTask(</span>) {
-    //TODO - Call addTask if task not empty and clean input value 
+  function handleAddNewTask() {
+    if (task != "") {
+      addTask(task);
+      setTask("");
+    }
   }
 &nbsp;
   return (
     &lt;View style={styles.inputContainer}&gt;
-      &lt;TextInput 
-        style={styles.input} 
+      &lt;TextInput
+        style={styles.input}
         placeholder="Adicionar novo todo..."
         placeholderTextColor="#B2B2B2"
         returnKeyType="send"
         selectionColor="#666666"
-        //TODO - use value, onChangeText and onSubmitEditing props
+        onChangeText={(text) =&gt; setTask(text)}
+        onSubmitEditing={handleAddNewTask}
+        value={task}
       /&gt;
       &lt;TouchableOpacity
         testID="add-new-task-button"
         activeOpacity={0.7}
         style={styles.addButton}
-        //TODO - onPress prop
+        onPress={handleAddNewTask}
       &gt;
         &lt;Icon name="chevron-right" size={24} color="#B2B2B2" /&gt;
       &lt;/TouchableOpacity&gt;
     &lt;/View&gt;
-  )
+  );
 }
 &nbsp;
 const styles = StyleSheet.create({
   inputContainer: {
-    backgroundColor: '#FFF',
+    backgroundColor: "#FFF",
     borderRadius: 5,
     marginTop: -28,
     marginHorizontal: 24,
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: "row",
+    alignItems: "center",
   },
   input: {
     flex: 1,
     height: 56,
     paddingHorizontal: 20,
-    backgroundColor: '#FFF',
+    backgroundColor: "#FFF",
     borderTopLeftRadius: 5,
     borderBottomLeftRadius: 5,
     borderRightWidth: 1,
-    borderRightColor: '#EBEBEB',
-    color: '#666666'
+    borderRightColor: "#EBEBEB",
+    color: "#666666",
   },
   addButton: {
-    backgroundColor: '#FFF',
+    backgroundColor: "#FFF",
     height: 56,
     paddingHorizontal: 12,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     borderTopRightRadius: 5,
     borderBottomRightRadius: 5,
   },
-});</pre></td></tr></table></pre>
+});
+&nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Tue Nov 09 2021 12:16:01 GMT-0300 (Horário Padrão de Brasília)
+                at Fri Nov 19 2021 08:29:45 GMT-0300 (Horário Padrão de Brasília)
             </div>
         </div>
         <script src="../prettify.js"></script>

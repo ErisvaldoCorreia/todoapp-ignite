@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1636470961819" clover="3.2.0">
-  <project timestamp="1636470961819" name="All files">
-    <metrics statements="16" coveredstatements="11" conditionals="4" coveredconditionals="0" methods="11" coveredmethods="4" elements="31" coveredelements="15" complexity="0" loc="16" ncloc="16" packages="4" files="7" classes="7"/>
+<coverage generated="1637321385358" clover="3.2.0">
+  <project timestamp="1637321385358" name="All files">
+    <metrics statements="32" coveredstatements="32" conditionals="14" coveredconditionals="13" methods="18" coveredmethods="18" elements="64" coveredelements="63" complexity="0" loc="32" ncloc="32" packages="4" files="7" classes="7"/>
     <package name="assets.icons.trash">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="trash.png" path="/Users/rethink/Documents/junior/todoapp-ignite/src/assets/icons/trash/trash.png">
@@ -17,38 +17,54 @@
       </file>
     </package>
     <package name="components">
-      <metrics statements="11" coveredstatements="6" conditionals="4" coveredconditionals="0" methods="7" coveredmethods="3"/>
+      <metrics statements="19" coveredstatements="19" conditionals="12" coveredconditionals="12" methods="10" coveredmethods="10"/>
       <file name="Header.tsx" path="/Users/rethink/Documents/junior/todoapp-ignite/src/components/Header.tsx">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="14" count="4" type="stmt"/>
-        <line num="26" count="2" type="stmt"/>
+        <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="12" count="13" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="13" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
       </file>
       <file name="ItemWrapper.tsx" path="/Users/rethink/Documents/junior/todoapp-ignite/src/components/ItemWrapper.tsx">
-        <metrics statements="3" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="11" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
+        <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="11" count="18" type="cond" truecount="2" falsecount="0"/>
+        <line num="12" count="13" type="stmt"/>
+        <line num="23" count="5" type="stmt"/>
       </file>
       <file name="TasksList.tsx" path="/Users/rethink/Documents/junior/todoapp-ignite/src/components/TasksList.tsx">
-        <metrics statements="4" coveredstatements="2" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="1"/>
-        <line num="22" count="6" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="76" count="2" type="stmt"/>
+        <metrics statements="6" coveredstatements="6" conditionals="6" coveredconditionals="6" methods="5" coveredmethods="5"/>
+        <line num="34" count="13" type="stmt"/>
+        <line num="37" count="24" type="stmt"/>
+        <line num="41" count="18" type="stmt"/>
+        <line num="48" count="2" type="stmt"/>
+        <line num="66" count="2" type="stmt"/>
+        <line num="80" count="2" type="stmt"/>
       </file>
       <file name="TodoInput.tsx" path="/Users/rethink/Documents/junior/todoapp-ignite/src/components/TodoInput.tsx">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
-        <line num="16" count="6" type="stmt"/>
-        <line num="38" count="2" type="stmt"/>
+        <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+        <line num="10" count="22" type="stmt"/>
+        <line num="13" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="7" type="stmt"/>
+        <line num="15" count="7" type="stmt"/>
+        <line num="19" count="22" type="stmt"/>
+        <line num="27" count="8" type="stmt"/>
+        <line num="43" count="2" type="stmt"/>
       </file>
     </package>
     <package name="pages">
-      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="1"/>
+      <metrics statements="11" coveredstatements="11" conditionals="2" coveredconditionals="1" methods="8" coveredmethods="8"/>
       <file name="Home.tsx" path="/Users/rethink/Documents/junior/todoapp-ignite/src/pages/Home.tsx">
-        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="1"/>
-        <line num="9" count="3" type="stmt"/>
-        <line num="23" count="3" type="stmt"/>
-        <line num="38" count="1" type="stmt"/>
+        <metrics statements="11" coveredstatements="11" conditionals="2" coveredconditionals="1" methods="8" coveredmethods="8"/>
+        <line num="9" count="10" type="stmt"/>
+        <line num="12" count="5" type="stmt"/>
+        <line num="18" count="5" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="27" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="34" count="2" type="stmt"/>
+        <line num="37" count="10" type="stmt"/>
+        <line num="52" count="1" type="stmt"/>
       </file>
     </package>
   </project>
